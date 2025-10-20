@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="La mejor orgánica a vuestro servicio" />
+
+    <title>Orgánica Mir</title>
+
+    <!-- Open Graph (opcional recomendado) -->
+    <meta property="og:title" content="Orgánica Mir" />
+    <meta property="og:description" content="La mejor orgánica a vuestro servicio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="media/logo.png" />
+
+    <!-- Fuentes (mejor por <link> que @import) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CSS del sitio -->
+    <link rel="stylesheet" href="estilos.css" />
+
+    <!-- Favicon (corregido el type) -->
+    <link rel="icon" href="media/logo.png" type="image/png" />
+</head>
+
+<body>
+    <!-- Skip link para accesibilidad teclado -->
+    <a href="#main" class="skip-link"
+        style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">
+        Saltar al contenido
+    </a>
+
+    <header>
+        <div class="logo">Orgánica <span>Mir</span></div>
+        <img src="media/logo.png" alt="Orgánica Mir" width="120" height="120" />
+        <nav class="barra" aria-label="Navegación principal">
+            <ul>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#informacion">Información</a></li>
+                <li><a href="./pages/contacto.html">Contacto</a></li>
+                <li><a href="./pages/ubicacion.html">Ubicación</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div class="call">
+            <h1>Nuestra huerta orgánica</h1>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi ab, corporis labore dignissimos nulla
+                in aliquam commodi modi cupiditate inventore veniam ullam! Repellendus, architecto quae nam provident
+                exercitationem fugit ad.
+            </p>
+            <!-- Ahora apunta a la sección real -->
+            <a class="callb" href="#informacion">MÁS INFO</a>
+        </div>
+    </main>
+
+    <h2>Nosotros</h2>
+    <section class="nosotros" id="informacion">
+        <!-- Si estas imágenes son solo decorativas vía CSS, marcamos el aside izquierdo como decorativo -->
+        <aside class="nleft" aria-hidden="true"></aside>
+        <aside class="nright">
+            <h3>¿Quiénes somos?</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eaque maiores ducimus,
+                exercitationem incidunt alias nesciunt corrupti, corporis dolores ratione vero ex ab nemo repellat animi
+                ut at. Officiis, itaque! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium
+                perferendis
+                atque placeat repellendus ipsa fugit nostrum. Reiciendis, culpa necessitatibus natus modi nulla voluptas
+                eveniet, molestias pariatur repellat fugit excepturi Lorem ipsum dolor sit amet consectetur adipisicing
+                elit.
+                Cumquet
+            </p>
+        </aside>
+    </section>
+
+    <h2>Galería</h2>
+    <section class="galeria" id="productos" aria-label="Galería de productos">
+        <article class="item item1" aria-hidden="true"></article>
+        <article class="item item2" aria-hidden="true"></article>
+        <article class="item item3" aria-hidden="true"></article>
+        <article class="item item4" aria-hidden="true"></article>
+        <article class="item item5" aria-hidden="true"></article>
+        <article class="item item6" aria-hidden="true"></article>
+        <article class="item item7" aria-hidden="true"></article>
+        <article class="item item8" aria-hidden="true"></article>
+    </section>
+
+    <footer>
+        <p>© <span id="year"></span> Orgánica Mir. Todos los derechos reservados.</p>
+        <div class="redes">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"
+                aria-label="Facebook de Orgánica Mir">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"
+                aria-label="Instagram de Orgánica Mir">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/home" target="_blank" rel="noopener noreferrer"
+                aria-label="Twitter de Orgánica Mir">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- Botón subir -->
+    <a href="#" class="subir" aria-label="Volver arriba">
+        <i class="fa-solid fa-caret-up" aria-hidden="true"></i>
+    </a>
+
+    <script>
+        // Año dinámico en el footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
