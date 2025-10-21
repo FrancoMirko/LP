@@ -408,3 +408,98 @@ main.ubicacion::after {
   margin: 16px 0;
   font-size: 16px;
 }
+
+/* ====== MOBILE FIRST FIXES (≤ 480px) ====== */
+@media (max-width: 480px) {
+
+  /* Header más compacto */
+  header {
+    height: auto;
+    padding: 10px 12px;
+    font-size: 20px;
+    /* baja el tamaño de “Orgánica Mir” */
+  }
+
+  header>img {
+    /* logo más chico */
+    width: 44px;
+  }
+
+  /* Nav que no se desborde y envuelva bien */
+  .barra {
+    float: none;
+  }
+
+  /* quita el float en mobile */
+  .barra ul {
+    display: flex;
+    /* en vez de inline-blocks */
+    flex-wrap: wrap;
+    gap: 12px;
+    /* reemplaza word-spacing */
+    padding: 8px 0;
+    margin: 0;
+    justify-content: flex-end;
+    /* o center, si preferís centrado */
+    list-style: none;
+  }
+
+  .barra ul li {
+    display: contents;
+  }
+
+  /* <li> sin caja para ahorrar espacio */
+  .barra a {
+    font-size: 16px;
+  }
+
+  /* Hero */
+  main {
+    height: auto;
+    /* evita forzar 100vh que corta contenido */
+    min-height: 75vh;
+    padding: 10px 0 20px;
+    background-position: center;
+  }
+
+  /* Caja “Nuestra huerta orgánica” más angosta y centrada */
+  .call {
+    width: 92%;
+    max-width: 420px;
+    /* limita ancho en teléfonos */
+    margin: 12px auto 24px;
+    /* centrada */
+    padding: 14px 16px;
+    border-width: 1px;
+    border-radius: 10px;
+    backdrop-filter: blur(1.5px);
+  }
+
+  .call h1 {
+    font-size: clamp(20px, 6vw, 26px);
+    margin-bottom: 10px;
+  }
+
+  .call p {
+    font-size: 14px;
+    line-height: 1.45;
+    margin-bottom: 12px;
+    max-width: 60ch;
+    /* evita líneas eternas */
+  }
+
+  .callb {
+    display: inline-block;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  /* Galería: tarjetas cómodas */
+  .galeria {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-auto-rows: 170px;
+    grid-gap: 12px;
+    padding: 12px;
+  }
+}
