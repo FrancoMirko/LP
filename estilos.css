@@ -31,6 +31,21 @@ header .logo span {
   color: #233;
 }
 
+/* 🔸 NUEVO: estilos para el logo imagen y alineación */
+header>img {
+  width: 64px;
+  /* controla tamaño de la olla/logo */
+  height: auto;
+  display: block;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  /* separa texto del logo */
+}
+
 header a {
   text-decoration: none;
   color: rgb(19, 18, 18);
@@ -39,6 +54,7 @@ header a {
 header a:hover {
   text-decoration: underline;
 }
+
 
 /* === NAV === */
 .barra {
@@ -171,7 +187,7 @@ h2 {
 }
 
 .item:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .item1 {
