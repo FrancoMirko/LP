@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 
-/* === RESET GENERAL === */
+/* === RESET & BASE === */
 * {
   margin: 0;
   padding: 0;
@@ -11,12 +11,15 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
 /* === HEADER === */
 header {
   height: 80px;
   width: 100%;
   background-color: springgreen;
-  font-family: 'Open Sans', sans-serif;
   font-weight: bolder;
   font-size: 25px;
   color: #fff;
@@ -31,10 +34,9 @@ header .logo span {
   color: #233;
 }
 
-/* 🔸 NUEVO: estilos para el logo imagen y alineación */
+/* Logo imagen y alineación */
 header>img {
   width: 64px;
-  /* controla tamaño de la olla/logo */
   height: auto;
   display: block;
 }
@@ -43,9 +45,9 @@ header .logo {
   display: flex;
   align-items: center;
   gap: 8px;
-  /* separa texto del logo */
 }
 
+/* Links del header */
 header a {
   text-decoration: none;
   color: rgb(19, 18, 18);
@@ -54,7 +56,6 @@ header a {
 header a:hover {
   text-decoration: underline;
 }
-
 
 /* === NAV === */
 .barra {
@@ -72,21 +73,12 @@ header a:hover {
   display: inline-block;
 }
 
-.barra a {
-  text-decoration: none;
-  color: rgb(19, 18, 18);
-}
-
-.barra a:hover {
-  text-decoration: underline;
-}
-
-/* === MAIN GENERAL === */
+/* === MAIN (HERO) === */
 main {
   background-image: url(media/vegetables-752153_1920.jpg);
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
 }
 
@@ -103,7 +95,6 @@ main {
 
 h1 {
   color: springgreen;
-  font-family: 'Open Sans', sans-serif;
   font-size: 30px;
   margin-bottom: 15px;
 }
@@ -111,7 +102,6 @@ h1 {
 .call p {
   color: #fff;
   margin-bottom: 30px;
-  font-family: 'Open Sans', sans-serif;
 }
 
 .callb {
@@ -119,7 +109,6 @@ h1 {
   text-decoration: none;
   color: #333;
   padding: 10px 20px;
-  font-family: 'Open Sans', sans-serif;
   border-radius: 4px;
 }
 
@@ -127,7 +116,6 @@ h1 {
 h2 {
   background-color: springgreen;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
   color: #FFF;
   text-shadow: 0 0 5px #233;
   font-size: 27px;
@@ -136,9 +124,9 @@ h2 {
 
 .nosotros {
   width: 100%;
-  height: 450px;
+  min-height: 450px;
+  /* <--- antes height fijo */
   background-color: #233;
-  font-style: normal;
   color: #fff;
 }
 
@@ -157,7 +145,6 @@ h2 {
 .nright h3 {
   text-align: center;
   font-size: 25px;
-  font-family: 'Open Sans', sans-serif;
   margin-bottom: 20px;
 }
 
@@ -165,14 +152,11 @@ h2 {
   text-align: center;
   font-size: 15px;
   padding: 20px;
-  font-family: 'Open Sans', sans-serif;
 }
 
 /* === GALERÍA === */
 .galeria {
   background-color: #333;
-  height: auto;
-  width: 100%;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(8, 200px);
@@ -184,6 +168,8 @@ h2 {
   width: 100%;
   border: 2px solid #fff;
   transition: transform 0.5s ease;
+  background-size: cover;
+  background-position: center;
 }
 
 .item:hover {
@@ -192,57 +178,40 @@ h2 {
 
 .item1 {
   background-image: url(media/item1.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
 .item2 {
   background-image: url(media/item2.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
 .item3 {
   background-image: url(media/item3.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
 .item4 {
   background-image: url(media/item4.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
 .item5 {
   background-image: url(media/item5.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
 .item6 {
   background-image: url(media/item6.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
 .item7 {
   background-image: url(media/item7.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
 .item8 {
   background-image: url(media/item8.jpg);
-  background-size: cover;
-  background-position: center;
 }
 
 /* === FOOTER === */
 footer {
   background-color: springgreen;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
   padding: 10px;
   font-size: 15px;
 }
@@ -256,7 +225,6 @@ footer i {
   font-size: 40px;
   color: #FFF;
   text-shadow: 0 0 5px #000;
-  letter-spacing: 10px;
 }
 
 /* === BOTÓN SUBIR === */
@@ -264,16 +232,16 @@ footer i {
   height: 40px;
   width: 40px;
   background-color: #fff;
-  border: 2px solid rgb(0, 0, 0);
+  border: 2px solid #000;
   position: fixed;
   right: 20px;
   bottom: 20px;
-  color: rgb(0, 0, 0);
+  color: #000;
   text-align: center;
   font-size: 35px;
   line-height: 35px;
   border-radius: 50%;
-  box-shadow: 0 0 5px rgb(255, 255, 255);
+  box-shadow: 0 0 5px #fff;
 }
 
 /* === MEDIA QUERIES === */
@@ -324,7 +292,7 @@ footer i {
   }
 }
 
-/* === UBICACIÓN (definitivo) === */
+/* === UBICACIÓN === */
 main.ubicacion {
   position: relative !important;
   min-height: calc(100vh - 120px) !important;
@@ -378,7 +346,6 @@ main.ubicacion::after {
   background-color: #233;
   padding: 150px;
   margin: auto;
-  font-family: 'Open Sans', sans-serif;
   color: white;
   box-shadow: 7px 13px 37px #000;
 }
@@ -395,7 +362,6 @@ main.ubicacion::after {
   border-radius: 4px;
   margin-bottom: 15px;
   border: 1px solid #FFF;
-  font-family: 'Open Sans', sans-serif;
   font-size: 18px;
 }
 
@@ -409,38 +375,32 @@ main.ubicacion::after {
   font-size: 16px;
 }
 
-/* ====== MOBILE FIRST FIXES (≤ 480px) ====== */
+/* ====== MOBILE FIXES (≤ 480px) ====== */
 @media (max-width: 480px) {
 
-  /* Header más compacto */
+  /* Header */
   header {
     height: auto;
     padding: 10px 12px;
     font-size: 20px;
-    /* baja el tamaño de “Orgánica Mir” */
   }
 
   header>img {
-    /* logo más chico */
     width: 44px;
   }
 
-  /* Nav que no se desborde y envuelva bien */
+  /* Nav */
   .barra {
     float: none;
   }
 
-  /* quita el float en mobile */
   .barra ul {
     display: flex;
-    /* en vez de inline-blocks */
     flex-wrap: wrap;
     gap: 12px;
-    /* reemplaza word-spacing */
     padding: 8px 0;
     margin: 0;
     justify-content: flex-end;
-    /* o center, si preferís centrado */
     list-style: none;
   }
 
@@ -448,27 +408,20 @@ main.ubicacion::after {
     display: contents;
   }
 
-  /* <li> sin caja para ahorrar espacio */
   .barra a {
     font-size: 16px;
   }
 
   /* Hero */
   main {
-    height: auto;
-    /* evita forzar 100vh que corta contenido */
-    min-height: 75vh;
     padding: 10px 0 20px;
     background-position: center;
   }
 
-  /* Caja “Nuestra huerta orgánica” más angosta y centrada */
   .call {
     width: 92%;
     max-width: 420px;
-    /* limita ancho en teléfonos */
     margin: 12px auto 24px;
-    /* centrada */
     padding: 14px 16px;
     border-width: 1px;
     border-radius: 10px;
@@ -485,7 +438,6 @@ main.ubicacion::after {
     line-height: 1.45;
     margin-bottom: 12px;
     max-width: 60ch;
-    /* evita líneas eternas */
   }
 
   .callb {
@@ -494,7 +446,28 @@ main.ubicacion::after {
     font-size: 14px;
   }
 
-  /* Galería: tarjetas cómodas */
+  /* Nosotros */
+  .nosotros {
+    min-height: auto;
+    height: auto;
+    padding-bottom: 16px;
+  }
+
+  .nleft {
+    height: 220px;
+  }
+
+  .nright {
+    padding: 16px;
+  }
+
+  .nright p {
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 60ch;
+  }
+
+  /* Galería */
   .galeria {
     grid-template-columns: 1fr;
     grid-template-rows: none;
